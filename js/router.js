@@ -21,7 +21,7 @@ function loadPage(page) {
 function runPageInit(page) {
   // 페이지 이름에 따라 초기화 함수 실행
   switch (page) {
-    case "index":
+    case "log":
       typeof initIndexPage === "function" && initIndexPage();
       break;
     case "pattern":
@@ -61,12 +61,12 @@ function loadPageScript(page) {
 
 // 해시 변경 시 페이지 로드
 window.addEventListener("hashchange", () => {
-  const page = location.hash.replace("#", "") || "index";
+  const page = location.hash.replace("#", "") || "log";
   loadPage(page);
 });
 
 // 첫 로딩 시 현재 해시 기준으로 페이지 로드
 document.addEventListener("DOMContentLoaded", () => {
-  const page = location.hash.replace("#", "") || "index";
+  const page = location.hash.replace("#", "") || "log";
   loadPage(page);
 });
