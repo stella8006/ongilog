@@ -1,51 +1,60 @@
 body {
-  font-family: sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f6f3ff;
+  background-color: #f7f7f7;
+  color: #111111;
+  font-size: 18px;
 }
 
+/* 상단 헤더 */
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
+  padding: 16px 20px;
+  border-bottom: 2px solid #ddd;
 }
 
-.left-icons, .right-icons {
+.left-icons,
+.right-icons {
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: #8456e8;
+  font-weight: 700;
+  font-size: 22px;
+  color: #4dabf7;
 }
 
 .icon-btn {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
 
+.icon-btn i {
+  font-size: 24px;
+  color: #5a5a5a;
+}
+
+/* 버튼 영역 */
 .action-buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
+  padding: 20px 16px;
+  background-color: #ffffff;
 }
 
 .action-buttons button {
   background: none;
   border: none;
   padding: 0;
-  width: 60px;
-  height: 60px;
+  width: 5rem;
 }
 
 .action-buttons img {
@@ -53,45 +62,58 @@ body {
   height: auto;
   display: block;
   border-radius: 50%;
+  border: 3px solid #e0e0e0;
 }
 
+/* 날짜 표시 */
 .date-display {
-  background-color: #e0e0e0;
+  background-color: #e8f0fe;
   text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
 }
 
+/* 기록 리스트 */
 .log-list {
-  padding: 10px 20px;
+  padding: 16px 20px;
 }
 
 .log-list ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .log-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #ddd;
+  font-size: 17px;
+  color: #222;
 }
 
+/* 하단 네비 */
 footer.bottom-nav {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 2rem 0;
   background-color: #ffffff;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 20px;
-  border-top: 1px solid #ccc;
+  font-size: 22px;
+  border-top: 2px solid #ccc;
 }
 
 footer.bottom-nav a {
   text-decoration: none;
-  color: #8456e8;
+  color: #5a5a5a;
+}
+
+footer.bottom-nav a:hover {
+  color: #5a5a5a;
 }
