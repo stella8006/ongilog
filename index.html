@@ -4,72 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>온기로그</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="manifest.json" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <meta name="theme-color" content="#8456e8" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="top-header">
-      <div class="left-icons">
-        <button class="icon-btn"><i class="fa-solid fa-bars"></i></button>
-        <button class="icon-btn">
-          <i class="fa-solid fa-circle-question"></i>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="action-buttons">
+        <button onclick="recordAction('식사')">
+          <img src="images/btn_eat.png" alt="식사" />
+        </button>
+        <button onclick="recordAction('약복용')">
+          <img src="images/btn_pill.png" alt="약복용" />
+        </button>
+        <button onclick="recordAction('수면')">
+          <img src="images/btn_sleep.png" alt="수면" />
+        </button>
+        <button onclick="recordAction('기타')">
+          <img src="images/btn_etc.png" alt="기타" />
         </button>
       </div>
-      <div class="logo">온기로그</div>
-      <div class="right-icons">
-        <button class="icon-btn"><i class="fa-solid fa-envelope"></i></button>
-        <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
-      </div>
-    </header>
 
-    <div class="action-buttons">
-      <button onclick="recordAction('식사')">
-        <img src="images/btn_eat.png" alt="식사" />
-      </button>
-      <button onclick="recordAction('약복용')">
-        <img src="images/btn_pill.png" alt="약복용" />
-      </button>
-      <button onclick="recordAction('수면')">
-        <img src="images/btn_sleep.png" alt="수면" />
-      </button>
-      <button onclick="recordAction('기타')">
-        <img src="images/btn_etc.png" alt="기타" />
-      </button>
-    </div>
+      <section class="date-display">
+        <span id="today-date"></span>
+      </section>
 
-    <section class="date-display">
-      <span id="today-date"></span>
-    </section>
+      <section class="log-list">
+        <ul id="log-list"></ul>
+      </section>
+    </main>
 
-    <section class="log-list">
-      <ul id="log-list"></ul>
-    </section>
+    <div id="footer-placeholder"></div>
 
-    <footer class="bottom-nav">
-      <a href="#"><i class="fa-solid fa-house"></i></a>
-      <a href="#"><i class="fa-solid fa-list"></i></a>
-      <a href="#"><i class="fa-solid fa-chart-line"></i></a>
-      <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
-      <a href="#"><i class="fa-solid fa-comments"></i></a>
-      <a href="#"><i class="fa-solid fa-user"></i></a>
-    </footer>
-
-    <script src="app.js"></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("service-worker.js")
-          .then(() => console.log("Service Worker registered"))
-          .catch((err) =>
-            console.error("Service Worker registration failed:", err)
-          );
-      }
-    </script>
+    <script src="js/common.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
